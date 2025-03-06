@@ -3,17 +3,17 @@ plugins {
 }
 
 android {
-    namespace 'com.calm.relax.minigame'
+    namespace 'com.calm.tick.tackrelax.minigame'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.calm.relax.minigame"
+        applicationId "com.calm.tick.tackrelax.minigame"
         minSdk 24
         targetSdk 34
-        versionCode 100
-        versionName "1.0.0"
+        versionCode 101
+        versionName "1.0.1"
         def formattedDate = new Date().format('MM.dd.yyyy')
-        archivesBaseName = "BobaTeaAndroid_v${versionName}_${formattedDate}"
+        archivesBaseName = "TG08B_v${versionName}_${versionCode}_${formattedDate}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -55,10 +55,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.2.2'
     //ads
     implementation 'com.google.android.gms:play-services-ads:22.6.0'
-    implementation 'com.github.nguyentruongnvt72:ads-mallegan-lib:1.0.7'
+    implementation 'com.github.nguyentruongnvt72:ads-mallegan-lib:1.1.0'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
-    implementation 'com.appsflyer:af-android-sdk:6.14.1'
-    implementation 'com.facebook.android:facebook-android-sdk:16.3.0'
+    implementation 'com.appsflyer:af-android-sdk:6.16.0'
+    implementation 'com.facebook.android:facebook-android-sdk:18.0.2'
 
     implementation project(':unityLibrary')
     implementation fileTree(dir: project(':unityLibrary').getProjectDir().toString() + ('\\libs'), include: ['*.jar'])
