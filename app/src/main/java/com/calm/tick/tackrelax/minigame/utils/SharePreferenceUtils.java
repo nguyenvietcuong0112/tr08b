@@ -27,13 +27,14 @@ public class SharePreferenceUtils {
     private static final String KEY_Roi = "isRoi";
 
     private static final String KEY_TUTORIAL = "isTutorial";
+    private static final String COUNTER_KEY = "counter_value";
 
 
     private static volatile SharePreferenceUtils instance;
 
     private SharedPreferences sharePreference;
 
-    private SharePreferenceUtils(Context context) {
+    public SharePreferenceUtils(Context context) {
         sharePreference = context.getSharedPreferences(LAUNCHER_IOS_NAME, Context.MODE_PRIVATE);
     }
 
@@ -158,7 +159,7 @@ public class SharePreferenceUtils {
 
     public static boolean isOrganic(Context context) {
         SharedPreferences pref = context.getSharedPreferences("data", Context.MODE_PRIVATE);
-        return pref.getBoolean("organic", true);
+        return pref.getBoolean("organic", false);
     }
 
     public static void setOrganicValue(Context context, boolean value) {
@@ -166,6 +167,15 @@ public class SharePreferenceUtils {
         SharedPreferences.Editor editor = pre.edit();
         editor.putBoolean("organic", value);
         editor.apply();
+    }
+    public int getCurrentValue() {
+        return sharePreference.getInt(COUNTER_KEY, 0);
+    }
+
+    public void incrementCounter() {
+        sharePreference.edit()
+                .putInt(COUNTER_KEY, getCurrentValue() + 1)
+                .apply();
     }
 
 

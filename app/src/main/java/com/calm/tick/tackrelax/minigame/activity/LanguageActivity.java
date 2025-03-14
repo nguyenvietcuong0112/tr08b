@@ -86,7 +86,7 @@ public class LanguageActivity extends BaseActivity implements UILanguageCustom.O
                 if (fromSettings) {
                     finish();
                 } else {
-                    startActivity(new Intent(LanguageActivity.this, MainActivity.class));
+                    startActivity(new Intent(LanguageActivity.this, IntroActivity.class));
                     finish();
                 }
             } else {

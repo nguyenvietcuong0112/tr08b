@@ -21,6 +21,7 @@ public class SplashActivity extends AbsBaseActivity {
 
 
     public  static  boolean isDelayBegin = false;
+    private SharePreferenceUtils sharePreferenceUtils;
 
     private ActivitySplashBinding binding;
     private InterCallback interCallback;
@@ -37,12 +38,22 @@ public class SplashActivity extends AbsBaseActivity {
 
 
     private void loadAds() {
+        sharePreferenceUtils = new SharePreferenceUtils(this);
+
+        int counterValue = sharePreferenceUtils.getCurrentValue();
+
         interCallback = new InterCallback() {
             @Override
             public void onNextAction() {
                 super.onNextAction();
-                startActivity(new Intent(SplashActivity.this, LanguageActivity.class));
-                finish();
+
+                if(counterValue == 0) {
+                    startActivity(new Intent(SplashActivity.this, LanguageActivity.class));
+                }
+                else {
+                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                }
+//
             }
         };
       if (SharePreferenceUtils.isOrganic(this)) {

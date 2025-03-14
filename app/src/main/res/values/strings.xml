@@ -3,5 +3,18 @@
     <string name="game_view_content_description">Game view</string>
     <string name="select_language">Choose language</string>
     <string name="this_action_can_contain_ads">This action can contain ads</string>
+    <string name="privacy_policy"></string>
+    <string name="languages">Languages</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    <string name="note_continue1">Play Doraemi Game</string>
+    <string name="note_continue2">Play Master Cheft Game</string>
+    <string name="note_continue3">Play Animal Sounds Game </string>
+    <string name="note_continue4">Play Break Candy Game</string>
+    <string name="goto_settings" translatable="false">You must approve this permission in Permissions in the app settings on your device to continue using the app.</string>
+    <string name="settings" translatable="false">Settings</string>
+    <string name="grant_permission" translatable="false"><![CDATA[>Please grant the application permission to continue using the app]]></string>
+
 
 </resources>

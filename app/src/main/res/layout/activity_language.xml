@@ -33,12 +33,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_16sdp"
                     android:ellipsize="end"
-                    android:fontFamily="@font/poppins_semibold"
                     android:maxLines="1"
                     android:text="@string/select_language"
                     android:textAlignment="center"
                     android:includeFontPadding="false"
                     android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/lonelycake"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -90,10 +90,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:maxLines="1"
+            android:fontFamily="@font/lonelycake"
             android:text="Please select language to continue"
             android:textColor="#232323"
-            android:textSize="@dimen/_14sdp"
-            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/_12sdp"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
         <com.calm.tick.tackrelax.minigame.utils.language.UILanguageCustom
